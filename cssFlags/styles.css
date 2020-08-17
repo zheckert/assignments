@@ -1,0 +1,206 @@
+.blackBorder {
+    border: 1px solid black;
+    width: 600px;
+    height: 400px;
+}
+
+.blackBorderS {
+    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+}
+
+.blackBorderNiger {
+    border: 1px solid black;
+    width: 600px;
+    height: 500px;
+}
+
+/* France */
+    .france1 {
+        width: 600px;
+        background-color: #ED2939;
+        height: 400px;
+        position: absolute;
+        
+    }
+
+    .france2 {
+        width: 400px;
+        background-color: #FFFFFF;
+        height: 400px;
+        position: absolute;
+    }
+
+    .france3 {
+        width: 200px;
+        background-color: #002395;
+        height: 400px;
+        position: absolute;
+        border: 1px solid black;
+    }
+
+/* Germany */
+    .germany1{
+        width: 600px;
+        height: 400px;
+        background-color: black;
+        position: absolute;
+    }
+    .germany2{
+        width: 600px;
+        height: 266px;
+        background-color: #DD0000;
+        position: absolute;
+    }
+    .germany3{
+        width: 600px;
+        height:133px;
+        background-color: #FFCE00;
+        position: absolute;
+    }
+
+/* Madagascar */
+    .madagascar1{
+        width: 600px;
+        height: 400px;
+        background-color: white;
+        position: absolute;
+    }
+    .madagascar2{
+        width: 400px;
+        height: 400px;
+        background-color: #FC3D32;
+        position: absolute;
+        left: 209px;
+    }
+    .madagascar3{
+        width: 400px;
+        height: 200px;
+        background-color: #007E3A;
+        position: absolute;
+        left:209;
+    }
+/* Switzerland */
+    .switzerland1{
+        width: 360px;
+        height: 120px;
+        background-color: white;
+        position: absolute;
+        left: 120;
+        bottom: -520;
+        
+    }
+    .switzerland2{
+        width: 120px;
+        height: 360px;
+        background-color: white;
+        position: absolute;
+        left:240;
+        bottom: -640;
+        
+    }
+    .switzerland3{
+        width: 600px;
+        height: 600px;
+        background-color: #FF0000;
+        position: absolute;
+    
+    }
+/* Sweden */
+    .sweden1{
+        width: 600px;
+        height: 80px;
+        background-color: #FECC00;
+        position: absolute;
+        bottom: -1080;
+        
+        
+    }
+    .sweden2{
+        width: 80px;
+        height: 400px;
+        background-color: #FECC00;
+        position: absolute;
+        left: 180;
+        
+    }
+    .sweden3{
+        width: 600px;
+        height: 400px;
+        background-color: #006AA7;
+        position: absolute;
+
+    }
+
+/* Gambia */
+    .gambia1{
+        width: 600px;
+        height: 400px;
+        background-color: #CE1126;
+        position: absolute;
+    }
+    .gambia2{
+        width: 600px;
+        height: 266px;
+        background-color: white;
+        position: absolute;
+
+    }
+    .gambia4{
+        width: 600px;
+        height: 100px;
+        background-color: #0C1C8C;
+        position: absolute;
+        bottom: -1576
+        
+
+    }
+    .gambia3{
+        width: 600px;
+        height:133px;
+        background-color: #3A7728;
+        position: absolute;
+    }
+
+/* Japan */
+    .japan1{
+        width: 266px;
+        height:266px;
+        background-color: #BC002D;
+        position: absolute;
+        left:170;
+        border-radius: 50%;
+        bottom: -2140px;
+    }
+/* Niger */
+    .niger1{
+        width: 600px;
+        height: 500px;
+        background-color: #0DB02B;
+        position: absolute;
+    }
+    .niger2{
+        width: 600px;
+        height: 350px;
+        background-color: #FFFFFF;
+        position: absolute;
+    }
+    .niger3{
+        width: 600px;
+        height:166px;
+        background-color: #E05206;
+        position: absolute;
+    }
+    .niger4{
+        width: 166px;
+        height:166px;
+        background-color: #E05206;
+        position: absolute;
+        left:215;
+        border-radius: 50%;
+        bottom: -2634px;
+    }
+
+/* Belize */
+    /* No */

@@ -1,0 +1,159 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    background-image: url("backgroundimg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+img {
+    width: 100px;
+    height: auto;
+}
+
+button {
+    background-color: #00A5EE;
+    color: #ffffff;
+    border: none;
+    padding: 5px;
+}
+button:hover {
+    color: black;
+    background-color: white;
+    border: #00A5EE solid 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    width: 60%;
+    margin: 20px;
+    
+}
+
+    .grid > div {
+        
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, .5);
+        
+    }
+
+        /* .chrome{
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+        }
+        .firefox{
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+        }
+        .internetExplorer{
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .opera{
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+        }
+        .safari{
+            grid-column: 1 / 2;
+            grid-row: 5 / 6;
+        } */
+
+        /* TEXT FOR GRID */
+
+        /* .chromeText{
+            grid-column: 2 / 3;
+            grid-row: 1 / 2;
+            padding: 10px;
+            
+        }
+        .firefoxText{
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+        }
+        .internetExplorerText{
+            grid-column: 2 / 3;
+            grid-row: 3 / 4;
+        }
+        .operaText{
+            grid-column: 2 / 3;
+            grid-row: 4 / 5;
+        }
+        .safariText{
+            grid-column: 2 / 3;
+            grid-row: 5 / 6;
+        } */
+
+     
+.nav {
+    
+    display: flex;
+    justify-content: space-between;
+    background-color: #00A5EE;
+    justify-content: space-between;
+    padding: 12px;
+    text-align: center;
+    font-size: 20px;
+    color: white
+    
+}
+
+.navSeparator {
+    margin-right: auto;
+}
+
+.padRight {
+    padding-right: 20px;
+}
+
+.contact {
+    display: flex;
+    background-color: #00A5EE;
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.contact > div {
+        margin:auto;
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+}
+.home > div {
+        margin:auto;
+}
+
+@media only screen and (max-width: 600px)
+{
+    html{
+        background-image: url("backgroundimgMobile.jpg");
+    }
+
+    .nav {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #00A5EE;
+        justify-content: space-between;
+        
+        text-align: center;
+        
+        color: white
+    }
+    .navSeparator {
+        margin:auto;
+    }
+
+}
