@@ -21,11 +21,11 @@ form.addEventListener("submit", function(event){
         const button2 = document.createElement('button')
         button2.textContent = "X"
         li.append(button2)
-        button2.addEventListener('click', function(e){
-            console.log(e)
+        addEventListener('click', function(e){
             e.target.parentNode.remove()
-        })    
+        })
+
     }
 
-    
+
 })

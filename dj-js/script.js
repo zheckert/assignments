@@ -1,10 +1,4 @@
-// onMouseMove: blue
-// onMouseDown: red
-// onMouseUp: yellow
-// onDblClick: green
-// onWheel: orange
-
-// onkeydown: 66, 82, 89, 71, 79
+const square = document.getElementById('square')
 
 document.getElementById('square').addEventListener('mousemove', changeColorMove);
 
@@ -38,4 +32,21 @@ window.addEventListener('wheel', changeColorWheel);
 
     function changeColorWheel() {
         document.getElementById('square').style.backgroundColor = "orange";
+    }
+
+window.addEventListener('keydown', keyboardColor);
+    function keyboardColor(e){
+        console.log(e)
+        if (e.code === "KeyB") {
+            square.style.backgroundColor = "blue";        
+        } else if (e.code === "KeyR"){
+            square.style.backgroundColor = "red";
+        } else if (e.code === "KeyY"){
+            square.style.backgroundColor = "yellow";
+        } else if (e.code === "KeyG"){
+            square.style.backgroundColor = "green";
+        } else if (e.code === "KeyO"){
+            square.style.backgroundColor = "orange";
+        }             
+        
     }
