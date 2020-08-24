@@ -1,14 +1,14 @@
 const form = document["mom-list"]
 
-form.addEventListener("submit", function(event){
-    event.preventDefault()
+form.addEventListener("submit", function(e){
+    e.preventDefault()
 
     const listItem = form.listItem.value
 
     if (form.listItem.value != ""){
         form.listItem.value = ""
         const li = document.createElement('li')
-        document.getElementsByTagName("ul")[0].append(li)
+        document.getElementById("list").append(li)
 
         const div = document.createElement('div')
         div.textContent = listItem
@@ -21,8 +21,9 @@ form.addEventListener("submit", function(event){
         const button2 = document.createElement('button')
         button2.textContent = "X"
         li.append(button2)
-        addEventListener('click', function(e){
+        button2.addEventListener('click', function(e){
             e.target.parentNode.remove()
+            console.log(e)
         })
 
     }

@@ -33,7 +33,7 @@ var num2 = vegetables.push(3);
 
 // // 7
 
-var food = fruit.concat(vegetables)
+var food = fruit.concat(vegetables);
 // console.log(food);
 
 // var index2 = food.indexOf(4);
@@ -44,7 +44,7 @@ var food = fruit.concat(vegetables)
 
 // 8
 
-food.splice(5, 2)
+food.splice(5, 2);
 
 
 // 9
@@ -54,5 +54,4 @@ food.reverse();
 
 // // 10
 
-
-console.log(food);
+console.log(food.join(", "));
