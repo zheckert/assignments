@@ -1,23 +1,28 @@
-// Here's a refresher for the constructor syntax:
+"use strict"
 
-// function Car (year, make, model) {
-//     // use the "this" keyword to reference each object 
-//     // that is created from this constructor
-//     this.year = year;
-//     this.make = make;
-//     this.model = model;
-// }
-
-// // then we "instantiate" (create a new object from) our constructor with the "new" keyword and pass in the parameters:
-
-// var myTacoma = new Car(2015, "Toyota", "Tacoma");
+let employees = [];
 
 function Employee (name, title, salary, status) {
     this.name = name
     this.title = title
     this.salary = salary
-    this.status = fullTime
-    
+    this.status = status
+    this.printEmployeeForm = function(){
+        console.log(this.name, this.title, this.salary, this.status);
+    }
+    employees.push(this);
 }
 
-var newEmployee ("Bob", "Viceroy of the Frozen Steppe", 60000, "full-time")
+let newEmployee = new Employee ("Bob", "Viceroy of the Frozen Steppe", 60000, "fullTime")
+let newEmployee1 = new Employee ("Ada", "Spy", 120000, "fullTime")
+let newEmployee2 = new Employee ("Leon", "Police Officer", 45000, "fullTime")
+
+newEmployee1.status = "Contract"
+newEmployee2.status = "Part-time"
+
+newEmployee.printEmployeeForm();
+newEmployee1.printEmployeeForm();
+newEmployee2.printEmployeeForm();
+
+console.log(employees);
+

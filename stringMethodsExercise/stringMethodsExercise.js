@@ -38,4 +38,4 @@ function oneTwo(string) {
 
 }
 
-console.log(oneTwo("Does it work"))
+console.log(oneTwo(""))
