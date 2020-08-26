@@ -1,17 +1,21 @@
 //1
+// for (var i = 0; i < array.length; i++){ 
+//     if(largest < array[i]) { 
+//         largest = array[i]; 
+//     }} 
+    
+// let biggest = 0;
 
-function largest(data){
+// function biggestInArray(array){
+//     for (let i = 0; i < array.length; i++){
+//             if (array[i] > biggest) {
+//                 biggest = array[i];
+//             }
+//         } return biggest
+//     }
 
-    for (let i = 0; i < data.length; i++) {
-        if (i > data.length[i]){
-            return(i)
-        }
+//     console.log(biggestInArray([1, 2, 3, 4, 5]))
 
-       }
-
-}
-
-console.log(largest([1, 2, 3, 4, 5]))
 
 //2
 
@@ -21,9 +25,10 @@ console.log(largest([1, 2, 3, 4, 5]))
 //         if (data[i].includes(str)){
 //             array.push(data[i])
 //         }
-//         return data
 //     }    
+//     return array
 // } 
+
 // console.log(lettersWithStrings(["#3", "$$$", "C%4!", "Hey!"], "!"))
 
 // 3
