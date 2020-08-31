@@ -1,21 +1,8 @@
-//     4. If a wild enemy appears:
-
-        // If attacking, a random amount of damage will be delt between a min and max
-        // If running, there will be a 50% chance of escaping
-        // After the player attacks or runs the enemy attacks back for a random damage amount
-        // If the player kills the enemy you can give the Player some HP and a special item that is stored in the inventory. After this, the player will continue walking. Use a while loop to control this flow.
-        // If the enemy kills the player the console prints a cool death message and the game ends
-
-//     5. Inventory
-
-        //When the player kills enemies, they are awarded with items
-
 //////////STUFF TO DO BELOW!!!////////////////////////////////////////
 
 //I need to make it so the player can die, and figure out how to deal damage. Also Maybe add +1 damage per hit for every extra item in your inventory? AND fleeing.
 //I need to finish the weapon randomizer and implement it into the battle loop.
 //also weird inventory single quotes
-// add "are you sure" to forfeit
 //I would like to color the player's health to be green at 100 and red at >100. Also damage numbers/ enemy health AND ENEMY NAMES! AND PLAYER NAME. Use https://www.npmjs.com/package/colors? PACKAGE IS INSTALLED. CANT GET IT TO WORK.
 
 const readlineSync = require("readline-sync")
@@ -27,6 +14,16 @@ let gameOver = false
 let player = {
         currentHealth: 100,
 }
+
+const blunt = ["crushing ", "smashing ", "blunt ", "ultradense ", "weighted ", "studded ", "heavy ",]
+const bladed = ["vorpal ", "scintillating ", "honed ", "cutting ", "slicing ", "chopping ", "rending ", "severing ", "sharpened ", "jagged ", "serrated ",]
+
+let weaponAdjective = ["filth-encrusted ", "fetid ", "dirty ", "gem-encrusted ", "gilded ", "golden ", "vomit-coated ", "bile-coated ", "hallowed ", "gore-stained ", "hell-spawned ", "blood-soaked ", "super-heated ","conflagrating ", "engraved ", "carved ", "magic ", "enhanced ", "refined ", "envenomed ", "venomous ", "soul-stealing ", "regenerating ", "enchanted ", "ensorceled ", "legendary ", "rune-etched ", "heroic ", "blessed ",]
+
+const bladedType = ["longsword ", "broadsword ", "falchion ", "zweihander ", "short sword ", "claymore ", "greatsword ", "dagger ", "butcher's knife ", "kris ", "handaxe ", "greataxe ", "glaive ", "halberd ", "scimitar ", ]
+const bluntType = ["warhammer ", "mallet ", "club ", "maul ", "flail ", "mace ", "cane ", "knuckleduster ", "morningstar ", "cudgel ", "quarterstaff ", "sledgehammer", "stave ",]
+
+let suffix = ["darkness", "light", "flame", "heat", "explosions", "thunderbolts", "flames", "ice", "hatred", "puissance", "malevolence", "potency", "power", "truth", "might", "carnage", "legend", "trauma", "rage", "fury", "insanity", "madness", "divinity", "caliginous funerals", "eternal moonlight", "ceaseless bloodthirst", "holy requiems", "unbridled magnificence", "decrepit coffins", "dessicated corpses", "angelic radiance","malignant cognizance", "leprous convergence", "the fungal blossoms", "wretched putrescence", ]
 
 let inventory = ["Your family's ancestral longsword", "Lightweight plate mail", "A lit lantern filled with oil",]
 
@@ -46,7 +43,7 @@ while(gameOver === false){
 
 function inventoryView(){
         console.log("You open your bags and check on your supplies:")
-        console.log(userName + ", you have " + player.currentHealth - playerDamage + " health remaining and the following item(s): ")
+        console.log(userName + ", you have " + player.currentHealth + " health remaining and the following item(s): ")
         console.log(inventory);
 }
 
@@ -103,18 +100,18 @@ function beginBattle(){
                 if(battleOptions === "f"){
                         let monsterDamage = Math.floor(Math.random() * 9)
                         console.log("You dance forward boldly, brandishing your weapon with killing intent! You deal " + monsterDamage + " damage to your foe.")
-                                if (Enemy.health - monsterDamage <= 0){
+                                Enemy.health = Enemy.health - monsterDamage;
+                                if (Enemy.health <= 0){
                                         console.log("The " + Enemy.name + " dies amidst a pool of purple ichor!\n")
-                                        console.log("After wiping your weapon clean you find a " + prize +  " amongst the carnage. You place it into your bags and prepare to proceed.")
-                                        // !! Link this up !!
-                                        //let prize = 
-                                        // inventory.push(function legendaryWeaponGenerator())
+                                        let prize = legendaryWeaponGenerator()
+                                        console.log("After wiping your weapon clean you find a " + prize +  " amongst the carnage. You place it into your bags and prepare to proceed.")                                        
+                                        inventory.push(prize)
                                         battle = false
                                         return;
                                 }
                         let playerDamage = Math.floor(Math.random() * 5)
-                        console.log("the creature lets loose a shriek and attacks! You take " + player.currentHealth - playerDamage + " damage.")
-
+                        console.log("the " + Enemy.name + " lets loose a shriek and attacks! You take " + playerDamage + " damage.")
+                                player.currentHealth = player.currentHealth - playerDamage;
                                 if(player.currentHealth - playerDamage <= 0){
                                         console.log("You are dealt a mortal blow!\n As you collapse into a broken heap you can't help but manage a smile- You perished attempting to save the life of your leige- a noble way to pass into the realms beyond. Hopefully they send another champion to finish your work before it's too late...");
                                         gameOver = true;
@@ -130,8 +127,8 @@ function beginBattle(){
                                                 let battle = false
                                                 return;
                                         } else if (flee === 1){
-                                                //finish me!
-                                                console.log()
+                                                console.log("The monster leaps into your path, preventing escape! It attacks you, dealing " + playerDamage +" damage!")
+                                                player.currentHealth = player.currentHealth - playerDamage;
                                         }
                         }
 
@@ -154,4 +151,15 @@ function spawnEnemy(){
 function Enemy(name, health){
         this.name = name
         this.health = health
+}
+
+function legendaryWeaponGenerator(){
+    let style = Math.floor(Math.random() * 2)
+    if(style === 0){
+        const bladedWeapon = bladed[Math.floor(Math.random()*blunt.length)] + weaponAdjective[Math.floor(Math.random()*weaponAdjective.length)] + bladedType[Math.floor(Math.random()*bluntType.length)] + "of " + suffix[Math.floor(Math.random()*suffix.length)];
+        return bladedWeapon;
+    } else if(style === 1){
+        const bluntWeapon = blunt[Math.floor(Math.random()*blunt.length)] + weaponAdjective[Math.floor(Math.random()*weaponAdjective.length)] + bluntType[Math.floor(Math.random()*bluntType.length)] + "of " + suffix[Math.floor(Math.random()*suffix.length)];
+        return bluntWeapon;
+    }
 }
