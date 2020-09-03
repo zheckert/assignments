@@ -8,40 +8,50 @@
 </head>
 <body>
     <h1>You Will Fly</h1>
-    <p>Please let us know your preferences so we can better serve you.</p>
-    <br id="form">
-        <div id="formInfo">
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName"></br>
+    
+    <form id="form">
+        <div id="formInfo"></div>
+        Please let us know your preferences so we can better serve you.
         </div>
+        <br id="form">
+            <div id="formInfo">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName"></br>
+            </div>
 
-        <div id="formInfo">
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName"></br>
-        </div>
+            <div id="formInfo">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName"></br>
+            </div>
 
-        <div id="formInfo">
-        <label for="age">Age</label>
-        <input type="number" id="age"></br>
-        </div>
+            <div id="formInfo">
+            <label for="age">Age</label>
+            <input type="number" id="age"></br>
+            </div>
 
-        <div id="formInfo">
-        <label for="destination">Destination</label>
-        <select name="locations" id="locations">
-            <option value="">Provo</option>
-            <option value="">Orem</option>
-            <option value="">Salt Lake City</option>
-        </select>
-        </div>
-
-        <p>Do you have any dietary restrictions?</p>
-        <input type="checkbox" value="Vegetarian" name="restrictions"/>
-        <label for="">Vegetarian</label></br>
-        <input type="checkbox" value="Kosher" name="restrictions"/>
-        <label for="">Kosher</label></br>
-        <input type="checkbox" value="Lactose-intolerant" name="restrictions"/>
-        <label for="">Lactose-intolerant</label></br>
-
+            <div id="formInfo">
+            <label for="destination">Destination</label>
+            <select name="locations" id="locations">
+                <option value="Provo">Provo</option>
+                <option value="Orem">Orem</option>
+                <option value="Salt Lake City">Salt Lake City</option>
+            </select>
+            </div>
+            <div id="formInfo">
+        Do you have any dietary restrictions?</br>
+            </div>
+            <div id="formInfo">
+            <input class="restrictions" type="checkbox" id="vegetarian" value="vegetarian" name="vegetarian"/>
+            <label for="">Vegetarian</label></br>
+            <input class="restrictions" type="checkbox" id="kosher" value="kosher" name="kosher"/>
+            <label for="">Kosher</label></br>
+            <input class="restrictions" type="checkbox" id="lactose-intolerant" value="lactose-intolerant" name="lactose-intolerant"/>
+            <label for="">Lactose-intolerant</label></br>
+            </div>
+            <div id="formInfo"></div>
+            <button type="submit" id="submit">Submit</button>
+            </div>
     </form>
+    <script src="app.js"></script> 
 </body>
 </html>

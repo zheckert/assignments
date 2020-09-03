@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Pest Control</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Mario Pest Control</h1>
+    <!-- maybe I don't need a form? -->
+    <form id="form" action="">
+        <div class="grid">
+            <div>
+
+                <div class="image">
+                    <img src="goomba.png" alt="Goomba" width="100" height="100">
+                </div>
+                <div class="text">
+                    Goomba</br>
+                    Price: 5 coins</br>
+                    <input type="number" id="goomba" placeholder="How many died?">
+                </div>
+
+            </div>
+                
+            <div>
+                <div class="image">
+                    <img src="bobomb.png" alt="Bob-omb" width="100" height="100">
+                </div>
+                <div class="text">
+                    Bob-omb</br>
+                    Price: 7 coins</br>
+                    <input type="number" id="bobomb"placeholder="How many died?">
+                </div>
+                
+            </div>
+
+            <div>
+                <div class="image">
+                    <img src="cheepcheep.png" alt="Cheep Cheep" width="100" height="100">
+                </div>
+                <div class="text">
+                    Cheep Cheep</br>
+                    Price 11 coins</br>
+                    <input type="number" id="cheepcheep" placeholder="How many died?">
+                </div>
+            </div>
+            <!-- <div class="buttonSpace"> -->
+                <div class="total" id="calculate">
+                    <button>Calculate Total</button>
+                    <h1 class="outline" id="append"></h1>
+                </div>
+        </div>
+
+        </div>
+        
+    </form>   
+    <!-- total cost calculated based on other input boxes -->
+
+    <footer>
+        <p><a href="mailto:mario@nintendo.com">mario@mario.com</a></p>
+        <p><a href="https://www.nintendo.com/">https://www.nintendo.com/</a></p>
+        <p>Mario's Pad, Mushroom Way, Mushroom Kingdom</p>
+      </footer> 
+</body>
+<script src="app.js"></script>
+</html>

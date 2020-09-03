@@ -1,0 +1,41 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.outline{
+    border: 3px solid black;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    height: 100px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 800px;
+}
+
+.image{
+    grid-column: 1 / 2;
+
+}
+.text{
+    grid-column: 2 / 3;
+
+}
+
+.total{
+    grid-column: 4 / 5;
+}
+
+footer{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #E1E1E1;
+}
+
+.buttonSpace{
+    margin-top: 25px;
+}
