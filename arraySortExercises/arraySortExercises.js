@@ -19,25 +19,25 @@
   
   // console.log(lengthSort(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "wolf", "eaten", "family"] 
 
-  // function alphabetical(arr) {
-  //     arr.sort();
-  //     return arr;
-  // }
-  
-  // console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "eaten", "family", "wolf"] 
-
-  function byAge(arr){
-    arr.sort((a, b) => a.age - b.age)
-    return arr
+  function alphabetical(arr) {
+      arr.sort();
+      return arr;
   }
   
-  console.log(byAge([
-      { name: "Quiet Samurai", age: 22 },
-      { name: "Arrogant Ambassador", age: 100 },
-      { name: "Misunderstood Observer", age: 2 },
-      { name: "Unlucky Swami", age: 77 }
-  ]));
-  // => [ { name: 'Misunderstood Observer', age: 2 },
+  console.log(alphabetical(["dog", "wolf", "by", "family", "eaten"])); // ["by", "dog", "eaten", "family", "wolf"] 
+
+  // function byAge(arr){
+  //   arr.sort((a, b) => a.age - b.age)
+  //   return arr
+  // }
+  
+  // console.log(byAge([
+  //     { name: "Quiet Samurai", age: 22 },
+  //     { name: "Arrogant Ambassador", age: 100 },
+  //     { name: "Misunderstood Observer", age: 2 },
+  //     { name: "Unlucky Swami", age: 77 }
+  // ]));
+  // // => [ { name: 'Misunderstood Observer', age: 2 },
   //  { name: 'Quiet Samurai', age: 22 },
   //  { name: 'Unlucky Swami', age: 77 },
   //  { name: 'Arrogant Ambassador', age: 100 } ]
