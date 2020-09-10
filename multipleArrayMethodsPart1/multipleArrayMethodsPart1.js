@@ -48,19 +48,37 @@ and finally, it needs to be outputted to look like an HTML li item. Make sure yo
 //     })
 // }
  
-function sortedOfAge(arr){
-    return arr.filter(function(num){
-        if(num.age > 18){
-            peopleArray.sort({
-                //x
-            })
-        }
-    })
-}
+//I want it to return it so it LOOKS like an html item, so I need to use strings. So we need to return something wrapped in `<li>${asdf}<li>`
+
+// function sortedOfAge(arr){
+//     return arr.filter(function(num){
+//         if(num.age > 18){
+//             return peopleArray.sort((a, b) => a.lastName - b.lastName)
+//         }
+//     })
+// }
  
+// function sortedOfAge(arr){
+//     return arr.filter(function(num){
+//         if(num.age > 18){
+//             return peopleArray
+//         }
+//     }).sort((a, b) => a.lastName - b.lastName)
+// }
+//  console.log(sortedOfAge(peopleArray));
+
+ function sortedOfAge(arr){
+    return arr.filter(num => num.age > 18).sort((a, b) =>{ 
+        if ( a.lastName < b.lastName ){
+        return -1;
+      }
+      if ( a.lastName > b.lastName ){
+        return 1;
+      }
+      return 0;}).map(li => `<li>${li.firstName} ${li.lastName} is ${li.age} years old.<li>`)
+    }
+
  console.log(sortedOfAge(peopleArray));
- return
- 
 
 /*
  Output: 
