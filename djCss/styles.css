@@ -1,0 +1,75 @@
+#audio {
+    padding: 20px;
+    align-content: center;
+}
+
+#container {
+    display: inline-block;
+}
+
+#img {
+    background-image: url("bob.jpg");
+    /*I have a background image here so you can tell the difference between background-color and the opacity of the background color.*/
+}
+
+.box {
+    border: 2px black solid;
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+
+}
+
+#a {
+    background-color: #6CFCCC;
+    transition: background-color 250ms linear 250ms, border-radius 1s linear;
+}
+    #a:hover {
+        background-color: #00FCFE;
+        border-radius: 90px;
+    }
+
+#b {
+    background-color:beige;
+}
+    #b:hover {
+        width: 75px;
+        height: 75px;
+        transition: width 1s, height 1s;
+    }
+
+#c {
+    background-color:beige;
+    transition: border 200ms, background-color 200ms;
+}
+    #c:hover {
+        border: 5px red dashed;
+        background-color: white;
+    }
+
+#d {
+    background-color:beige;
+    transition: box-shadow 1s;
+}   
+    #d:hover {
+        box-shadow: 30px -5px teal;
+    }
+
+#e {
+    background-color:beige;
+    transition: background-image 1s, background-color 1s, border 1s;
+}
+    #e:hover {
+        background-image: url("vschool.png");
+        background-color: white;
+        border: 0px;
+    }
+
+#f {
+    background-color:beige;
+    transition: background-color 1s;
+}
+    #f:hover {
+        background-color: rgba(255, 99, 71, 0);
+            
+    }
