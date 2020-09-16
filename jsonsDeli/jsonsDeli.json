@@ -1,0 +1,68 @@
+{
+    "hot sandwich": [
+        {
+            "name": "Meatball",
+            "ingredients": ["meatballs", "bread", "cheese", "toppings"],
+            "description": "This sandwich is really all you'll ever need. It's perfect in every way"
+        },
+        {
+            "name": "Panini",
+            "ingredients": ["meat", "bread", "cheese", "veggies"],
+            "description": "This sandwich is renowned for being cooked in an Easy-Bake Oven"
+        },
+        {
+            "name": "French Dip",
+            "ingredients": ["meat", "bread", "cheese", "Au jus"],
+            "description": "This sandwich should be washed in the accompanying bath of au jus before consumption"
+        }
+    ],
+    "cold sandwich": [
+        {
+            "name": "Jimmy John's Veggie",
+            "ingredients": ["bread", "plants"],
+            "description": "This is all my wife can eat when she's pregnant. A lifesaver"
+        },
+        {
+            "name": "Cranberry-Walnut Chicken Salad Sandwich",
+            "ingredients": ["cranberries", "walnuts", "chicken salad", "bread"],
+            "description": "I took this from the internet: https://www.tasteofhome.com/recipes/cranberry-walnut-chicken-salad-sandwiches/"
+        }
+    ],
+    "appetizer": [
+        {
+            "name": "Spring rolls",
+            "ingredients": ["meat", "filling", "rice paper", "mint flavoring"],
+            "description": "A tube for eating and it's not toothpaste"
+        },
+        {
+            "name": "Party bread",
+            "ingredients": ["calories"],
+            "description": "This is copious amounts of bread and cheese and will almost certainly end you. What's that? I'm not supposed to eat it all by myself?"
+        }
+    ],
+    "drink": [
+        {
+            "name": "Root beer",
+            "ingredients": ["sugar", "water", "carbonation", "amber flavor"],
+            "description": "Made from tree roots and bark, make sure you don't get ice"
+        },
+        {
+            "name": "Sprite",
+            "ingredients": ["sugar", "water", "carbonation", "pale flavor"],
+            "description": "Made from water and flavoring, make sure you don't get ice"
+        }
+       
+    ],
+    "dessert": [
+        {
+            "name": "Ice cream",
+            "ingredients": ["ice", "cream", "flavorings"],
+            "description": "A tasty cold treat!"
+        },
+        {
+            "name": "Cheesecake",
+            "ingredients": ["crust", "filling", "Cherry sauce"],
+            "description": "Decadent and needlessly heavy, if the party bread didn't get you, this probably will instead"
+        }
+    ]
+}
