@@ -1,6 +1,6 @@
 //so basically I'm requesting data to be used on my page or something. I get the data and then I utilize it somewhere on my website. API's provide me and my webpage with info to use.
 
-//nate talks about duplicated lists in the last axios video
+//Get POSTS to appear asynchronously.
 
 //CRUD!
 
@@ -13,6 +13,7 @@ const todoForm = document.todoForm
         //parameters for my new to-do item. Axios handles the JSONic configuration
         const newTodo = {
             title: todoForm.title.value,
+            price: todoForm.price.value,
             description: todoForm.description.value,
             imgUrl: todoForm.imgUrl.value
         }
@@ -24,33 +25,45 @@ const todoForm = document.todoForm
 
 //------------------------------R (Read/Retrieve/GET)------------------------------
 
-    //Test//
-    // const newTodo = {
-    //     title: "Axios To-do",
-    //     description: "I'm posting a new item with Axios.",
-    //     imgUrl: "https://images.prismic.io/vschool/0f06215c-8704-42ed-9eda-98a68120b71e_Hero+Img.jpg?auto=format%2Ccompress&fit=max&q=50"
-    // }
-
     axios.get("https://api.vschool.io/zachheckert/todo")
         .then(response => {
             for(let i = 0; i < response.data.length; i++){
                 const h5 = document.createElement("h5")
                 h5.textContent = response.data[i].title
                 document.body.appendChild(h5)
+
+                const pr = document.createElement("p")
+                // if(response.data[i].price === BASICALLY I WNAT IT TO NOT SHOW UP IF NO price)
+                pr.textContent = `$${response.data[i].price}`
+                document.body.appendChild(pr)
+
+                const p = document.createElement("p")
+                p.textContent = response.data[i].description
+                document.body.appendChild(p)
+                // if(response.data[i].imgUrl === BASICALLY I WNAT IT TO NOT SHOW UP IF NO IMG)
+                const img = document.createElement("img")
+                img.src = response.data[i].imgUrl
+                document.body.appendChild(img)
+
+                if(response.data[i].completed === true){
+                    h5.style.setProperty("text-decoration", "line-through");
+                    p.style.setProperty("text-decoration", "line-through");
+                }
+
+                //can I add a delete button here, too?
+                const deleteButton = document.createElement("button")
+                deleteButton.textContent = "Remove"
+                document.body.appendChild(deleteButton)
+                    deleteButton.addEventListener("click", function(){
+                        axios.delete("https://api.vschool.io/zachheckert/todo/" + response.data[i]._id)
+                        .then(alert("Item successfully deleted!"))
+                        .catch(alert("There was an error removing your item. Please try again!"))
+                    })
             }
         })
-        .catch(error => console.log(error))
-        
-    axios.get("https://api.vschool.io/zachheckert/todo/")
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error))
 
 //------------------------------U (Update/Modify/PUT)------------------------------
     //This is where I'd put an edit button. Right?
-    // const updates = {
-    //     title: "TEST - THIS WAS SUCCESSFULLY MODIFIED USING A PUT REQUEST",
-    //     completed: true
-    // }
 
     // axios.put("https://api.vschool.io/zachheckert/todo/", updates)
     //     .then(response => console.log(response.data))
@@ -58,15 +71,12 @@ const todoForm = document.todoForm
 
 //------------------------------D (Delete/DELETE!)------------------------------
 
+        //MOVING THIS UP TO THE RELEVANT PLACE ON THE GET STUFF!!!
+
     //!!!!!!!!!!!!!!!(make sure you link it up to your html doc)!!!!!!!!!!!! also getting the id will be important as well, so figure that out: 
 
-    // const button = document.getElementById('delete-button')
+    //I added buttons when "GET-ing", I need to make those buttons functional and make sure they refer to their parent object.
 
-    // button.addEventListener("click", function(){
-    //     axios.delete("https://api.vschool.io/zachheckert/todo/")
-    //     .then(response => console.log(response))
-    //     .catch(error => console.log(error))
-    // })
 
     // axios.delete("https://api.vschool.io/zachheckert/todo/")
     //     .then(response => console.log(response))
