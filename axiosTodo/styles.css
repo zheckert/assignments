@@ -6,7 +6,7 @@ img{
 .todoItem{
     border: 2px solid black; 
     padding: 20px;
-
+    margin: 3px;
 }
 
 body{

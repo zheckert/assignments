@@ -88,11 +88,11 @@ html, body {
     /* use this media query to help these two cells drop to the bottom when screens are smaller */
     .authors {
          grid-column: 1/-1;
-         grid-row: 4/5;
+         grid-row: 9/10;
     }
     .links {
         grid-column: 1/-1;
-        grid-row: 5/6;
+        grid-row: 10/11;
 
     }
     /* container could use some help so that it's children are full screen width */
