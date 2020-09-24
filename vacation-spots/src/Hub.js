@@ -1,10 +1,10 @@
 import React from "react"
-import Places from "./components/Places"
+import Place from "./components/Place"
 import destinations from "./components/destinations"
+import "./styles.css"
 
 function Hub(){
-    const placesToGo = destinations.map(places => <Places key={places.id} places={places}/>)
-
+    const placesToGo = destinations.map((destination, i) => <Place place = {destination.place} price = {destination.price} timeToGo = {destination.timeToGo} index = {i}/>)
         return(
             <div>
                 {placesToGo}
