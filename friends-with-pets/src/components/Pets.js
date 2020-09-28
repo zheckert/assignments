@@ -8,3 +8,5 @@ export const Pet = props => {
         </div>
     )
 }
+
+export default Pets

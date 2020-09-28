@@ -1,8 +1,6 @@
 import React from "react"
 
-//Need to finish <Pets />
-
-export const Friend = props => {
+Friend = props => {
     return(
         <div>
             <h3>{props.name}</h3>
@@ -11,3 +9,5 @@ export const Friend = props => {
         </div>
     )
 }
+
+export default Friend
