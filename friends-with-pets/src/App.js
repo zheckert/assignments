@@ -1,10 +1,12 @@
 import React from "react"
-import FriendList from "./components/FriendList"
+import Pets from "./components/Pets"
+import Friend from "./components/Friend"
+import friends from "./components/FriendList"
 
 
 function App() {
-    //You need to 
-    const friendLoop = FriendList.map(friends => <FriendList name = {friends.name} age = {friends.age} />)
+    //How do I get <Friend /> and <Pets /> in here so they work in the loop?
+    const friendLoop = friends.map(friends => <Friend name = {friends.name} age = {friends.age} pet = {<Pets />}/>)
 
     return(
         <div>

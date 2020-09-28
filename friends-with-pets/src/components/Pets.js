@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Pet = props => {
+function Pets(props) {
     return (
         <div>
             <h4>{props.name}</h4>

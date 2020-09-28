@@ -57,5 +57,4 @@ const friends = [
   ]
 
 export default friends
-
 //I'll be mapping through my friends.js here. I need to render a <Friend /> component and use props to pass through their name, age, and pets
