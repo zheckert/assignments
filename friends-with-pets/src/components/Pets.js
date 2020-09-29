@@ -1,9 +1,11 @@
 import React from "react"
+import "../index.css"
 
 function Pets(props) {
+
     return (
-        <div>
-            <h4>{props.name}</h4>
+        <div className="borderProperty2">
+            <h3>{props.name}</h3>
             <p>{props.breed}</p>
         </div>
     )
