@@ -6,9 +6,7 @@ function App(){
     return(
         <div>
             <BigBox />
-            <button>Reverse!</button>
-            {/* <button onClick={this.props.reverse}>REVERSE!</button> */}
-            {/* <Button /> */}
+            <button onClick={this.props.reverse}>REVERSE!</button>}
         </div>
     )
     
