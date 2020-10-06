@@ -6,25 +6,33 @@ class BigBox extends React.Component {
         super()
         this.state = {
            colors: ["white", "white", "white", "white"]
-        }
-        this.reverse = this.reverse.bind(this)
+        }  
     }
 
-    reverse(){
+    reverse = () => {
         this.setState(prevState => {
-            return {
-                colors: ["black", "black", "black", "black", ]//maira said to put a map function here to reverse things
+
+            if(prevState.colors[0] === "black"){
+                return {
+                    colors: ["white", "white", "white", "white", ]//maira said to put a map function here to reverse things
+                }
+            }else{
+                return {
+                    colors: ["black", "black", "black", "black", ]//maira said to put a map function here to reverse things
+                }
             }
+
         })
     }
 
     render(){
+
+        const colorsMap = this.state.colors.map(color => <Box color={color}/>)
+
         return(
             <div className="grid">
-                <Box color={this.state.colors[0]}/>
-                <Box color={this.state.colors[1]}/>
-                <Box color={this.state.colors[2]}/>
-                <Box color={this.state.colors[3]}/>
+                {colorsMap}
+                <button onClick={this.reverse}>REVERSE!</button>
             </div>
         )
     }
