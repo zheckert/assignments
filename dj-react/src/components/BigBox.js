@@ -5,7 +5,7 @@ class BigBox extends React.Component {
     constructor(){
         super()
         this.state = {
-           colors: ["white", "black", "white", "black"]
+           colors: ["white", "white", "white", "white"]
         }
         this.reverse = this.reverse.bind(this)
     }
@@ -13,23 +13,18 @@ class BigBox extends React.Component {
     reverse(){
         this.setState(prevState => {
             return {
-                if(colors: prevState.count === white){
-                    colors: black
-                }
+                colors: ["black", "black", "black", "black", ]//maira said to put a map function here to reverse things
             }
-
-        this.state = {
-            ["black", "white", "black", "white"];
-        }
+        })
     }
 
     render(){
         return(
             <div className="grid">
-                <Box color={this.state.colors[0]/>
-                <Box color={this.state.colors[1]/>
-                <Box color={this.state.colors[0]/>
-                <Box color={this.state.colors[1]/>
+                <Box color={this.state.colors[0]}/>
+                <Box color={this.state.colors[1]}/>
+                <Box color={this.state.colors[2]}/>
+                <Box color={this.state.colors[3]}/>
             </div>
         )
     }

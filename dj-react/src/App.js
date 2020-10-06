@@ -6,7 +6,7 @@ function App(){
     return(
         <div>
             <BigBox />
-            <button onClick={this.props.reverse}>REVERSE!</button>}
+            <button onClick={reverse()}>REVERSE!</button>
         </div>
     )
     
