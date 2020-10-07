@@ -1,11 +1,11 @@
 import React from "react"
 
 function Box(props){
-    return(
-        <div style = {{backgroundColor: "white"}} className = "box">
-            <p>{props.color}</p>
-        </div>
-    )
+    
+        return(
+            <div style = {{backgroundColor: props.color}} className = "box">
+            </div>
+        )
 }
 
 export default Box
