@@ -5,33 +5,41 @@ class DiceBox extends React.Component {
     constructor(){
         super();
         this.state ={
-                num: 0
+                num: [0, 0, 0, 0, 0]
         }
     }
-       
+
+    lotsaDice = () => {
+        return(
+            this.state.num.map(dice => <Die number = {dice} />)
+        )
+    } 
+
     roll = () => {
+        const nums = []
+        for(let i = 0; i < 5; i++){
+            nums.push(Math.floor((Math.random() * 6) + 1))
+        }
         this.setState(prevState => {
             return{
-                num: Math.floor((Math.random() * 6) + 1)
+                num: nums
             }
         })
     }
 
     render(){
         return(
-            <div>
-                <Die number = {this.num}/>
-                <Die number = {this.num}/>
-                <Die number = {this.num}/>
-                <Die number = {this.num}/>
-                <Die number = {this.num}/>
-            <button onClick = {this.roll}>Roll New</button>
+            <>
+            <div className = "container">
+               {this.lotsaDice()}
             </div>
+            <div className = "button">
+                <button onClick = {this.roll}>Roll New</button>
+            </div>
+            </>
     
         )
     }
-
 }
-
 
 export default DiceBox
