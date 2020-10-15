@@ -15,6 +15,7 @@ class Form extends React.Component {
             info: "",
             completedForms: []
         }
+       
     }
 
     handleChange = (event) => {
@@ -27,9 +28,18 @@ class Form extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
+
         this.setState((prevState) => {
-            //Finish fleshing this out
-            return { completedForms: [prevState.name, ...prevState.completedForms]}
+            const newEntry = {...this.state}
+            return {
+            firstName: "", 
+            lastName: "", 
+            email: "", 
+            placeOfBirth: "", 
+            phone: "", 
+            favoriteFood: "", 
+            info: "", 
+            completedForms: [newEntry, ...prevState.completedForms]}
         })
     }
 
@@ -51,70 +61,81 @@ class Form extends React.Component {
 
     render() {
         return(
+            <>
             <div >
-                <form onSubmit={this.handleSubmit} className="container">
-                    <input 
-                        name="firstName"
-                        className="child1"
-                        placeholder="First Name"
-                        type="text"
-                        value={this.state.firstName}
-                        onChange={this.handleChange}
-                    />
-                    <input 
-                        name="lastName"
-                        className="child2"
-                        placeholder="Last Name"
-                        type="text"
-                        value={this.state.lastName}
-                        onChange={this.handleChange}
-                    />
-                    <input 
-                        name="email"
-                        className="child3"
-                        placeholder="Email"
-                        type="text"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                    />
-                    <input 
-                        name="placeOfBirth"
-                        className="child4"
-                        placeholder="Place of Birth"
-                        type="text"
-                        value={this.state.placeOfBirth}
-                        onChange={this.handleChange}
-                    />
-                    <input 
-                        //restrict to numbers
-                        name="phone"
-                        className="child5"
-                        placeholder="Phone"
-                        type="text"
-                        value={this.state.phone}
-                        onChange={this.handleChange}
-                    />
-                    <input 
-                        name="favoriteFood"
-                        className="child6"
-                        placeholder="Favorite Food"
-                        type="text"
-                        value={this.state.favoriteFood}
-                        onChange={this.handleChange}
-                    />
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input 
+                            name="firstName"
+                            className="flex"
+                            placeholder="First Name"
+                            type="text"
+                            value={this.state.firstName}
+                            onChange={this.handleChange}
+                        />
+                        <input 
+                            name="lastName"
+                            className="flex"
+                            placeholder="Last Name"
+                            type="text"
+                            value={this.state.lastName}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                            name="email"
+                            className="flex"
+                            placeholder="Email"
+                            type="text"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
+                        <input 
+                            name="placeOfBirth"
+                            className="flex"
+                            placeholder="Place of Birth"
+                            type="text"
+                            value={this.state.placeOfBirth}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <div>
+                        <input 
+                            name="phone"
+                            className="flex"
+                            placeholder="Phone"
+                            type="number"
+                            value={this.state.phone}
+                            onChange={this.handleChange}
+                        />
+                        <input 
+                            name="favoriteFood"
+                            className="flex"
+                            placeholder="Favorite Food"
+                            type="text"
+                            value={this.state.favoriteFood}
+                            onChange={this.handleChange}
+                        />
+                    </div>
                     <br />
                     <input 
                         name="info"
-                        className="child7"
+                        className="flex"
                         placeholder="Tell us a bit about yourself!"
                         type="text"
                         value={this.state.info}
                         onChange={this.handleChange}
                     />
-                    <input type="submit" value="Submit"/>
+                    <br />
+                    <div><input className="button" type="submit" value="Submit"/></div>
                 </form>
+            </div>
+
+            <div>
                 {this.newBadge()}
             </div>
+            </>
         ) 
     }
 }

@@ -1,19 +1,52 @@
-.outline{
+
+
+.newFormOutline{
+    border: 2px black solid;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.badgeHeader{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex2{
+    display: flex;
+    justify-content: space-around;
+    border: 2px black solid;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.formItem{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .container{
     border: 2px black solid;
     border-radius: 3px;
     padding: 10px;
-}
-
-/* .button{
-    display: flex;
-    justify-content: center;
-} */
-
-.container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-gap: 10px 10px;
+    margin: 10px;
 }
 
     .child1{
@@ -49,4 +82,4 @@
     .child7{
         grid-column: 1/3;
         grid-row: 4/7;
-    }
+    } */

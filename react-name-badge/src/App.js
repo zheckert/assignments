@@ -4,7 +4,7 @@ import "./index.css"
 
 export const App = () => {
     return(
-        <div className="outline">
+        <div>
             <p>{<Form />}</p>
         </div>
     )

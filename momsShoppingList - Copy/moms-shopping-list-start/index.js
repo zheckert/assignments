@@ -21,12 +21,7 @@ form.addEventListener("submit", function(e){
         const button2 = document.createElement('button')
         button2.textContent = "X"
         li.append(button2)
-        button2.addEventListener('click', function(e){
-            e.target.parentNode.remove()
-            console.log(e)
-        })
-
+        
+        button2.addEventListener('click', (e) => e.target.parentNode.remove())
     }
-
-
 })
