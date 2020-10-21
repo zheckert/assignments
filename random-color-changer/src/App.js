@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 
 class App extends React.Component{
     constructor(){
@@ -9,8 +10,7 @@ class App extends React.Component{
     }
     
     componentDidMount = () => {
-        fetch(`http://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
-        .then(response => response.json())
+        axios.get(`http://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
         .then(colorData => {
             console.log(colorData.new_color)
             this.setState({
