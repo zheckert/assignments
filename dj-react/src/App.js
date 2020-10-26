@@ -1,6 +1,6 @@
 import React from "react"
 import "./styles.css"
-import BigBox from "./BigBox"
+import BigBox from "./components/BigBox"
 
 function App(){
     return(
