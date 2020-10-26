@@ -6,6 +6,7 @@
 // return the new letters of the alphabet.
 
 //double check how to use spread instead of .join(""")?
+const notALetter = ' \\\' "(){}!@#$%^&*()1234567890-_=+|":;<>,.?/~`'
 
 var readline = require('readline-sync');
 var input = readline.question('What phrase would you like to encrypt? ').toLowerCase();
@@ -15,26 +16,26 @@ let arr = [];
 let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 hailCaesar = () => {
+
     for (let i = 0; i < input.length; i++){
-        let newNums = alphabet.indexOf((input[i])) + shift 
-        console.log(newNums)
-        if(newNums >= 26){
-           arr.push(newNums - 26)
-        
+        if(input[i] === notALetter){
+
         }else{
-            arr.push(newNums)
-            
-        }
-        // let final = arr.push(newNums)
-        // charCodeAt(i)
-        // console.log(final.join(""))
-        // return final.join("")
-        console.log(arr.join(""))
-        console.log(alphabet.indexOf([arr]))
-    }
+            let newNums = alphabet.indexOf((input[i])) + shift 
+
+            if(newNums >= 26){
+            arr.push(newNums - 26)
+            }else{
+                if((newNums < 0))
+            arr.push(newNums + 26)
+            }       
+        console.log(arr)
+        return arr 
+    } 
     
 }
-console.log(hailCaesar())
+}
+
 
 
 
