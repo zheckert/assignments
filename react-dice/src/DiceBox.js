@@ -20,10 +20,8 @@ class DiceBox extends React.Component {
         for(let i = 0; i < 5; i++){
             nums.push(Math.floor((Math.random() * 6) + 1))
         }
-        this.setState(prevState => {
-            return{
-                num: nums
-            }
+        this.setState({
+            num: nums
         })
     }
 

@@ -1,13 +1,7 @@
-//To do- make sure that the names format correctly when added to the list.
-
-//Eric also says I'll need a map?
-
 import React from "react"
 
 class App extends React.Component {
-    
     constructor(){
-        
         super()
         this.state = {
             name: "",
@@ -16,7 +10,6 @@ class App extends React.Component {
     }
 
     handleChange = (event) => {
-        event.preventDefault();
         this.setState({
             name: event.target.value
         })
@@ -24,7 +17,7 @@ class App extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault();
-        this.setState((prevState) => {
+        this.setState(prevState => {
             return { pastNames: [prevState.name, ...prevState.pastNames] }
         })
     }

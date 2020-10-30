@@ -13,11 +13,11 @@ hailCaesar = () => {
             continue;
         }
         let newNums = alphabet.indexOf((input[i])) + shift 
-        if(newNums >= 26){
-           arr.push(alphabet[newNums - 26])
-        }else{
-           arr.push(alphabet[newNums])
-        }
+            if(newNums >= 26){
+                arr.push(alphabet[newNums - 26])
+            }else{
+                arr.push(alphabet[newNums])
+            }
     }
     return arr.join("")
 }

@@ -12,12 +12,22 @@ class App extends React.Component{
     componentDidMount = () => {
         axios.get(`http://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
         .then(colorData => {
-            console.log(colorData.new_color)
             this.setState({
-                color: colorData.new_color
+                color: colorData.data.new_color
             })
         })
+        //Below is the data using fetch()
+        // fetch(`http://www.colr.org/json/color/random?timestamp=${new Date().getTime()}`)
+        // .then(response => {
+        //     response.json()
+        // })
+        // .then(colorData => {
+        //     this.setState({
+        //         color: colorData.new_color
+        //     })
+        // })
     }
+    
 
     render(){
         return(
