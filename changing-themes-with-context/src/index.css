@@ -1,0 +1,9 @@
+.lightTheme {
+  background-color: lightblue;
+  color: darkslategray
+}
+
+.darkTheme {
+  background-color: darkslategray;
+  color: lightblue;
+}
