@@ -1,39 +1,30 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {Target} from "./Target"
 import "./index.css"
 
-class App extends React.Component {
-    constructor() {
-        super()
-        this.state = {
-            loading: false,
-            hitList: []
-        }          
-    }
+export const App = () => {
+    const [loading, setLoading] = useState(false)
+    const [hitList, setList] = useState([])
 
-    componentDidMount() {
-        this.setState({loading: true})
+    useEffect(() => {
+        setLoading(true)
         fetch("https://raw.githubusercontent.com/VSchool/vschool-api/master/static/hitlist.json")
             .then(response => response.json())
             .then(data => {
-                this.setState({
-                    loading: false,
-                    hitList: data
-                })
+                setLoading(false)
+                setList(data)
             })
-    }
+    }, [])
 
-    render(){
+    let hitData = hitList.map(hit => <Target name={hit.name} image={hit.image}/>)
 
-        let hitData = this.state.hitList.map(hit => <Target name={hit.name} image={hit.image}/>)
-
-        return(
-            <div>
-                {this.state.loading ? "Now loading! Thank you for your patience, you're so gracious for sticking around while we gather the data you requested from the Star Wars API." : null} 
-                {hitData}     
-            </div>  
-        )
-    }
+    return(
+        <>
+        <h1 className="container">Hitlist</h1>
+        <div>
+            {loading ? "Now loading! Thank you, etc, etc" : null}
+            {hitData}
+        </div>
+        </>
+    )
 }
-
-export default App
