@@ -1,8 +1,8 @@
 import React from "react"
 import "./styles.css"
-import BigBox from "./components/BigBox"
+import {BigBox} from "./components/BigBox"
 
-function App(){
+export const App = () => {
     return(
         <div>
             <BigBox />
@@ -10,5 +10,3 @@ function App(){
     )
     
 }
-
-export default App

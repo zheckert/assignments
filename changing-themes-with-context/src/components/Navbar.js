@@ -1,8 +1,12 @@
-import React from "react"
+import React, { useContext } from "react"
+import { ThemeContext } from "./themeContext"
 
-export const Navbar = () => {
+export const Navbar = (props) => {
+
+    const context = useContext(ThemeContext)
+
     return(
-        <div className="flex">
+        <div className={`${context.theme}-theme`}>
             <div>
                 Home
             </div>
