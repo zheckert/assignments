@@ -1,5 +1,6 @@
-import React, {useContext, useState} from "react"
-import {Context} from "../context"
+import React, { useContext, useState } from "react"
+import { Context } from "../context"
+import { v4 as uuid } from "uuid"
 
 export const Inputs = () => {
     const {addUglyThing} = useContext(Context)
@@ -7,7 +8,7 @@ export const Inputs = () => {
 
     const addThing = (event) => {
         event.preventDefault()
-        addUglyThing(inputState)
+        addUglyThing({...inputState, id: uuid()})
     }
 
     const handleChange = (event) => {

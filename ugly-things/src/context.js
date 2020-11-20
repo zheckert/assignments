@@ -1,4 +1,4 @@
-import React, {useContext, useState} from "react"
+import React, { useState } from "react"
 const Context = React.createContext()
 
 export const ContextProvider = (props) => {
@@ -9,11 +9,25 @@ export const ContextProvider = (props) => {
         setThings(prevThings => [...prevThings, thing])
     }
 
+    const superDelete = (id) => {
+        setThings(prevThings => prevThings.filter(thing => thing.id != id))   
+    }
+
+    const edit = () => {
+        setThings(prevThings => prevThings.map(thing => {
+            if(thing.id === id){
+                return editedThing
+            }else{
+                return thing
+            }
+        }))
+    }
+
     return(
-            <Context.Provider value={{things, addUglyThing}}>
+            <Context.Provider value={{things, addUglyThing, superDelete, edit}}>
                 {props.children}
             </Context.Provider >
     )
 }
 
-export {Context}
+export { Context }
