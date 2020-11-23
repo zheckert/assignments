@@ -23,7 +23,7 @@ export const Inputs = () => {
             </div>
             <form className="header">
                 <input className="formSpacer" placeholder="Title" name="title" value={inputState.title} onChange={handleChange}></input>
-                <input className="formSpacer" placeholder="Image URL" name="imageUrl" value={inputState.imageUrl} onChange={handleChange}></input>
+                <input className="formSpacer" placeholder="Image URL" name="image" value={inputState.image} onChange={handleChange}></input>
                 <input className="formSpacer" placeholder="Description" name="description" value={inputState.description} onChange={handleChange}></input>
                 <button onClick={addThing}>Add</button>
             </form>

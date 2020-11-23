@@ -1,3 +1,4 @@
+
 import React, { useState } from "react"
 const Context = React.createContext()
 
@@ -13,14 +14,19 @@ export const ContextProvider = (props) => {
         setThings(prevThings => prevThings.filter(thing => thing.id != id))   
     }
 
-    const edit = () => {
-        setThings(prevThings => prevThings.map(thing => {
-            if(thing.id === id){
-                return editedThing
-            }else{
-                return thing
+
+    console.log(things)
+    const edit = (change) => {
+        let r = [...things]
+        console.log(change.id)
+        for(let i = 0; i < r.length; i++){
+            console.log(r)
+            if(change.id === r[i].id){
+                r.splice(i, i + 1, change)
+                setThings(r)
             }
-        }))
+        }
+
     }
 
     return(
