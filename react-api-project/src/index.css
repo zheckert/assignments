@@ -1,0 +1,22 @@
+* {
+  font-family: 'Heebo', sans-serif;;
+}
+
+body {
+  background-color: #FEF900;
+}
+
+input {
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
