@@ -1,20 +1,25 @@
 import React from "react"
-import { Shortener } from "./components/Shortener"
+import { Header, Shortener, Footer } from "./components/index"
 import './index.css';
 
 export const App = () => {
   return(
     <div>
       <div className="center">
-        <h1>URL SHORTENER</h1>
+        <Header />
       </div>
       <div className="center">
-      http://example.com/!leearn javascript$/
-      https://www.aliexpress.com/item/4000151357526.html?aff_platform=portals-tool&sk=_dShEGZD&aff_trace_key=125bdfedc61d458ea09ff0b304b93d49-1606344934772-02885-_dShEGZD&terminal_id=fe850e56997d42039baba5bd39d7616f&tmLog=new_Detail
+        <div>https://www.aliexpress.com/item/4000151357526.html?aff_platform=portals-tool&sk=_dShEGZD&aff_trace_key=125bdfedc61d458ea09ff0b304b93d49-1606344934772-02885-_dShEGZD&terminal_id=fe850e56997d42039baba5bd39d7616f&tmLog=new_Detail</div>
       </div>
       <div className="center">
+        This app utilizes the API found at https://goolnk.com/api/v1/shorten to truncate a link.
+      </div>
+      <div>
         <Shortener />
       </div>  
+      <div className="footerSpacer">
+        <Footer />
+      </div>
     </div>
   )
 }
