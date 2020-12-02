@@ -15,7 +15,7 @@ export const Shortener = () => {
         e.preventDefault();
         axios.post("https://vschool-cors.herokuapp.com?url=https://goolnk.com/api/v1/shorten", {url: longLink})
             .then((response) => {
-                setShortLink(response.data.result_url)
+                setShortLink(`Your new link is ${response.data.result_url}`)
                 })
             .catch((error) => console.log(error))
     }
@@ -23,15 +23,18 @@ export const Shortener = () => {
     const onChange = (e) => {
         setLongLink(encodeURI(e.target.value))
     }
-    
+
+    //Potential idea: make sure link is copyable to clipboard. See below:
+    //https://stackoverflow.com/questions/45071353/copy-text-string-on-click
+
     return(
         <>
         <div className="shortenerCenter">
             <input className={`input${hover ? " hover" : "" }`} name="link" placeholder="Put your link in here!" onChange={onChange}></input>
             <button className={`button${hover ? " hover" : "" }`} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)} onClick={shorten}>CUT!</button>
         </div>
-        <div>
-            {shortLink}
+        <div className="center">
+            <h3>{shortLink}</h3>
         </div>
         </>
     )

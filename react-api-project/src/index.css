@@ -1,3 +1,25 @@
+:root {
+  --yellow: #0059fe;
+  --blue: #4FBEDB;
+}
+
+a:link {
+  color: var(--yellow);
+  text-decoration: none;
+}
+a:visited {
+  color: var(--yellow);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--blue);
+  text-decoration: none;
+}
+a:active {
+  color: var(--blue);
+  text-decoration: none;
+}
+
 * {
   /* https://fonts.google.com/specimen/Heebo?category=Sans+Serif&thickness=9&sidebar.open=true&selection.family=Heebo:wght@200;400;900 */
   font-family: 'Heebo', sans-serif;
@@ -47,14 +69,27 @@
 }
 
 .footerSpacer {
-  margin-top: 15%;
+  margin: 15%;
 }
 
 .shortenerCenter {
   display: flex;
   justify-content: center;
-  margin-top: 15%;
+  margin-top: 10;
 }
 
-/* responsive junk below */
+.nav {
+  display: flex;
+  justify-content: center;
+}
 
+.navCenter {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+
+.spacer {
+  padding-left: 10px;
+  padding-right: 10px;
+}
