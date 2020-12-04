@@ -27,20 +27,22 @@ export const Thing = (props) => {
             </div>
             <div>
                 <div>
-                    <h3>{props.title}</h3>
+                    
+                    <h3>title:{props.title}</h3>
                 </div>
                 <div>
                     {props.description}
                 </div>
                 <button onClick={() => superDelete(props.id)}>Delete</button>
                 <button onClick={() => setEditing(true)}>Edit</button>
+                {/* Label all form fields! */}
                 {editing ? <>
-                    <input onChange={(e) => setChange(prev => {
-                        return { ...prev, image: e.target.value }
-                    })} value={change.image} />
                     <input onChange={(e) => setChange(prev => {
                         return { ...prev, title: e.target.value }
                     })} value={change.title} />
+                    <input onChange={(e) => setChange(prev => {
+                        return { ...prev, image: e.target.value }
+                    })} value={change.image} />
                     <input onChange={(e) => setChange(prev => {
                         return { ...prev, description: e.target.value }
                     })} value={change.description}

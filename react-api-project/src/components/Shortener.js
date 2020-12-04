@@ -27,6 +27,8 @@ export const Shortener = () => {
     //Potential idea: make sure link is copyable to clipboard. See below:
     //https://stackoverflow.com/questions/45071353/copy-text-string-on-click
 
+    //Also, we could add the additional text on shortlink to the h3 below instead of adding it to state.
+
     return(
         <>
         <div className="shortenerCenter">

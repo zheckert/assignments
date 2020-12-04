@@ -11,11 +11,9 @@ export const ContextProvider = (props) => {
     }
 
     const superDelete = (id) => {
-        setThings(prevThings => prevThings.filter(thing => thing.id != id))   
+        setThings(prevThings => prevThings.filter(thing => thing.id !== id))   
     }
 
-
-    console.log(things)
     const edit = (change) => {
         let r = [...things]
         console.log(change.id)
@@ -26,7 +24,6 @@ export const ContextProvider = (props) => {
                 setThings(r)
             }
         }
-
     }
 
     return(

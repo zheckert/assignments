@@ -7,8 +7,6 @@ import { Home } from "./components/Home"
 import { Services } from "./components/Services"
 import { About } from "./components/About"
 
-
-
 export const App = () => {
   return(
     <div>
