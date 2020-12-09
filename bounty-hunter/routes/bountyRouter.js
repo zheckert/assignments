@@ -64,6 +64,33 @@ bountyRouter.route("/")
         res.send(`Successfully added ${newBounty.name} to the hitlist.`)
     })
 
+bountyRouter.get("/:bountyId", (req, res) => {
+    const bountyId = req.params.bountyId
+    const foundBounty = bounty.filter(bounty => bounty._id === bountyId)
+    res.send(foundBounty)
+})
+
+    ///specify target name in the res.send?
+bountyRouter.delete("/:bountyId", (req, res) => {
+    const bountyId = req.params.bountyId
+    const bountyIndex = bounty.findIndex(bounty => bounty._id === bountyId)
+    bounty.splice(bountyIndex, 1)
+    res.send("Target eliminated. On to the next one.")
+})
+
+bountyRouter.put("/:bountyId", (req, res) => {
+    // console.log(req.body)
+    // console.log(req.params.bountyId)
+    const bountyId = req.params.bountyId
+    const updatedList = req.body
+    // console.log(updatedList)
+    const bountyIndex = bounty.findIndex(bounty => bounty._id === bountyId)
+    // console.log(bountyIndex)
+    const updatedBounty = Object.assign(bounty[bountyIndex], updatedList)
+    // console.log(updatedBounty)
+    res.send(updatedBounty)
+})
+
 module.exports = bountyRouter
 
 
