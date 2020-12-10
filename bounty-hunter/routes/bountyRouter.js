@@ -79,15 +79,10 @@ bountyRouter.delete("/:bountyId", (req, res) => {
 })
 
 bountyRouter.put("/:bountyId", (req, res) => {
-    // console.log(req.body)
-    // console.log(req.params.bountyId)
     const bountyId = req.params.bountyId
     const updatedList = req.body
-    // console.log(updatedList)
     const bountyIndex = bounty.findIndex(bounty => bounty._id === bountyId)
-    // console.log(bountyIndex)
     const updatedBounty = Object.assign(bounty[bountyIndex], updatedList)
-    // console.log(updatedBounty)
     res.send(updatedBounty)
 })
 
