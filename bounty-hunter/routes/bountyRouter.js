@@ -1,4 +1,4 @@
-const express = require("express")
+const express = require("/express")
 const bountyRouter = express.Router()
 const { v4: uuid } = require("uuid")
 
