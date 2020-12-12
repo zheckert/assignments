@@ -18,6 +18,9 @@ export const AddBountyForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         props.submit(inputs, props._id)
+        if(props.buttonText === "Submit Changes"){
+            props.setEditBounty(prevEdit => !prevEdit)
+        }
         setInputs(initialInputs)
     }
 

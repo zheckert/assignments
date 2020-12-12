@@ -26,6 +26,7 @@ export const Bounty = (props) => {
                         buttonText="Submit Changes"
                         submit={props.editBounty}
                         _id={_id}
+                        setEditBounty={setEditBounty}
                     />
                     <button onClick={() => setEditBounty(prevEdit => !prevEdit)}>Cancel Changes</button>
                 </>

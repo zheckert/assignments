@@ -36,10 +36,7 @@ export const App = () => {
 
   const editBounty = (edits, bountyId) => {
     axios.put(`/bounty/${bountyId}`, edits)
-    .then(res => console.log(res))
-    //   {
-    //   setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))
-    // })
+    .then(res => {setBounties(prevBounties => prevBounties.map(bounty => bounty._id !== bountyId ? bounty : res.data))})
     .catch(err => console.log(err))
   }
 
