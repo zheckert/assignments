@@ -41,13 +41,13 @@ export const AddBountyForm = (props) => {
                 onChange={handleChange}
                 placeholder="Target's last name?"
             />
-        {/* <input 
+        <input 
                 type=""
                 name="living"
                 value={inputs.living}
                 onChange={handleChange}
                 placeholder="Is person currently alive?"
-            /> */}
+            />
             <input 
                 type="number"
                 name="bountyAmount"
@@ -55,13 +55,13 @@ export const AddBountyForm = (props) => {
                 onChange={handleChange}
                 placeholder="How much should their bounty be?"
             />
-        {/* <input 
+        <input 
                 type=""
                 name="isJedi"
                 value={inputs.isJedi}
                 onChange={handleChange}
                 placeholder="Is this person a jedi?"
-            /> */}
+            />
             <button>{ props.buttonText }</button>
         </form>
     )
