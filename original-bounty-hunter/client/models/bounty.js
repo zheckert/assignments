@@ -12,15 +12,15 @@ const bountySchema = new Schema({
     },
     living: {
         type: Boolean,
-        required: true,
+        default: true,
     },
     bountyAmount: {
         type: Number,
-        required: true,
+        default: 1000,
     },
     isJedi: {
         type: Boolean,
-        required: true,
+        default: false,
     }
 })
 
