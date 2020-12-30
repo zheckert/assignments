@@ -29,6 +29,12 @@ bountyRouter.route("/")
 //     res.send(foundBounty)
 // })
 
+// axios.delete('url.com/bounty/98798')
+
+// const req.params = {
+//     bountyId: 98798
+// }
+
 //     ///specify target name in the res.send?
 bountyRouter.delete("/:bountyId", (req, res, next) => {
     Bounty.findOneAndDelete({_id: req.params.bountyId}, (error, deletedItem) => {
@@ -56,6 +62,5 @@ bountyRouter.put("/:bountyId", (req, res, next) => {
 })
 
 module.exports = bountyRouter
-
 
 
