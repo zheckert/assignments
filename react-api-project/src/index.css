@@ -1,14 +1,15 @@
 :root {
-  --yellow: #0059fe;
+  --darkBlue: #0059fe;
   --blue: #4FBEDB;
+  --yellow: #FEF900;
 }
 
 a:link {
-  color: var(--yellow);
+  color: var(--darkBlue);
   text-decoration: none;
 }
 a:visited {
-  color: var(--yellow);
+  color: var(--darkBlue);
   text-decoration: none;
 }
 a:hover {
@@ -55,16 +56,16 @@ a:active {
 }
 
 .button.hover {
-  border-top: 3px solid #FEF900;
-  border-right: 3px solid #FEF900;
-  border-bottom: 3px solid #FEF900;
-  background-color: #FEF900; 
+  border-top: 3px solid var(--yellow);
+  border-right: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--yellow);
+  background-color: var(--yellow); 
 }
 
 .input.hover {
-  border-top: 3px solid #FEF900;
-  border-left: 3px solid #FEF900;
-  border-bottom: 3px solid #FEF900;
+  border-top: 3px solid var(--yellow);
+  border-left: 3px solid var(--yellow);
+  border-bottom: 3px solid var(--yellow);
   color: #4FBEDB;
 }
 

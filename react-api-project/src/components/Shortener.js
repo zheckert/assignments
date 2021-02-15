@@ -1,11 +1,6 @@
 import axios from "axios"
 import React, { useState } from "react"
 
-//procedure: take input and URL encode (encodeURI()) https://attacomsian.com/blog/javascript-encode-url
-//send new URL to API
-//return and print new url somewhere https://goolnk.com/docs
-//don't forget to make it responsive
-
 export const Shortener = () => {
     const [ longLink, setLongLink ] = useState("")
     const [ shortLink, setShortLink] = useState("")

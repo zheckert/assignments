@@ -2,6 +2,8 @@ import React from "react"
 import { Switch, Route } from "react-router-dom"
 import { NavLink } from "react-router-dom"
 
+import { FaGithub } from "react-icons/fa"
+
 import { About, Documentation } from "./index"
 
 export const Footer = () => {
@@ -25,6 +27,9 @@ export const Footer = () => {
                 <Documentation />
             </Route>
         </Switch>
+        <div className="center">
+            <a href="https://github.com/zheckert/assignments/tree/master/react-api-project" target="_blank" rel="noreferrer"><FaGithub /></a>
+        </div>
         </>
     )
 }
